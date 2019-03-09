@@ -1,0 +1,102 @@
+<!Doctype html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="UTF-8">
+        <title>Counter Strike</title>
+        <link rel="stylesheet" href="main.css">
+        <meta name="author" content="Bujnarowski Bartek">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <style>
+                body{background-image: url(Obrazy/csgobg.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <span class="logo">
+                <a href="#">Counter Strike</a>
+            </span>
+            <input type="checkbox" id="nav-btn" class="nav-btn"/>
+            <nav>
+                <ul>
+                    <li><a href="#info" onclick='unChecked()'>O grze</a></li>    
+                    <li><a href="#gal" onclick='unChecked()'>Galeria</a></li>
+                    <li><a href="#film" onclick='unChecked()'>Filmy</a></li>
+                </ul>
+            
+        </nav>
+        <label for="nav-btn" class="nav-btn-label">
+            <span>
+                
+            </span>
+        </label>
+        </header>
+        <main>
+            <span id="top"><a href="#"><i class="fas fa-arrow-circle-up"></i></a></span>
+            <article class="puste">
+                
+            </article>
+            <article id="info">
+                <div class="inf">
+                    <p><i>Counter Strike</i>- seria gier komputerowych z gatunku first-person shooter. W głównej mierze gry są przeznaczone dla rozgrywki wieloosobowej, w których gracze walczą między sobą wcielając się w terrorystów lub antyterrorystów.</p>
+                </div>
+                <a href="https://steamcommunity.com/app/730"><span class="logolol"><img src="Obrazy/csgologo.png" alt="logo"></span></a>
+            </article>
+            <article class="puste">
+                
+            </article>
+            <article id="gal">
+                <div class="flex">
+                    <figure>
+                        <img src="Obrazy/galcs1.jpg" alt="jeden">
+                    </figure>
+                    <figure>
+                        <img src="Obrazy/galcs2.jpg" alt="dwa">
+                    </figure>
+                    <figure>
+                        <img src="Obrazy/galcs3.jpg" alt="trzy">
+                    </figure>
+                    <figure>
+                        <img src="Obrazy/galcs4.jpg" alt="cztery">
+                    </figure>
+                </div>
+            </article>
+            <article class="puste">
+                
+            </article>
+            <article id="film">
+                <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/_1ken7K5kQ4"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </article>
+        </main>
+        <footer>
+            Copyright <sup>&copy;</sup> Bartek Bujnarowski <i>HOBBY</i>
+        </footer>
+        
+        <script>
+            const navBtn = document.getElementById("nav-btn");
+
+            function unChecked(){
+                if(navBtn.checked==true)
+                navBtn.checked = false;
+            }
+
+            $(document).ready(function()
+            {
+
+                $(document).scroll(function()
+                {
+                    var scrollval = $(document).scrollTop()/100;
+                    var $scrollValue = 1 - $(document).scrollTop()/500;
+                    $('.home-box').css('opacity', $scrollValue);
+
+                });
+
+                $('')
+            });
+    
+        </script>
+    </body>
+</html>

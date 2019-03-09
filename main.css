@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Muli', sans-serif;
+    width: 100%;
+    background-color: black;
+    }
+footer{
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    font-family: Verdana;
+    height: 2.5vh;
+    position: relative;
+    bottom: 0;
+    background-color: black;
+}
+main article{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    padding: 50px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+.flex{
+    margin: 0 auto;
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+/* Telefony */
+@media(max-width: 1023px){
+    *{
+        cursor: default;
+    }
+    body{
+        background-image: none;
+    }
+    .jeden{
+        width: 100%;
+        height: 32vh;
+        background-size: 100% 100%;
+        background-image: url(Obrazy/fortnite_telefon.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        transition: 0.5s background; 
+    }
+    .jeden i{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-60%);
+        text-align: center;
+        vertical-align: middle;
+        opacity: 0;
+        font-size: 40px;
+        color: white;
+    }
+    .jeden:hover i{
+        background-repeat: no-repeat;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    .jeden:hover{
+        background-image: url(Obrazy/fortnite_telefon1.jpg);
+        transition: 0.5s all;
+    }
+    .dwa{
+        width: 100%;
+        height: 33vh;
+        background-size: 100% 100%;
+        background-image: url(Obrazy/csgotelefon.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        transition: 0.5s background; 
+    }
+    .dwa i{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-60%);
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+        font-size: 40px;
+        opacity: 0;
+    }
+    .dwa:hover i{
+        background-repeat: no-repeat;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    .dwa:hover{
+        background-image: url(Obrazy/csgotelefon1.jpg);
+        transition: 0.5s all;
+    }
+    .trzy{
+        width: 100%;
+        height: 32vh;
+        background-size: 100% 100%;
+        background-image: url(Obrazy/loltelefon1.jpg);
+        background-repeat: no-repeat;
+        position: relative;
+        transition: 0.5s background; 
+    }
+    .trzy i{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-60%);
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+        font-size: 40px;
+        opacity: 0;
+    }
+    .trzy:hover i{
+        background-repeat: no-repeat;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    .trzy:hover{
+        background-image: url(Obrazy/loltelefon.jpg);
+        transition: 0.5s all;
+    }
+    main article{
+        overflow: hidden;
+    }
+    
+    /* nawigacja*/
+    header{
+        background-color:	#DC143C;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        height: 50px;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        height: 50px;
+        font-weight: 700;
+        color: white;
+    }
+    .logo img{
+        margin: 5px 5px;
+        width: 30px;
+        height: 30px;
+    }
+    .nav-btn{
+        display: none !important;
+    }
+    .nav-btn-label{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 1em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .nav-btn-label span{
+        transition: .1s ease;
+    }
+    .nav-btn-label span,
+    .nav-btn-label span::before,
+    .nav-btn-label span::after{
+        display: block;
+        background: white;
+        height: 2px;
+        width: 2em;
+        border-radius: 2px;
+        position: relative;
+    }
+    .nav-btn-label span::before,
+    .nav-btn-label span::after{
+        content: "";
+        position: absolute;
+        transition: transform .3s ease;
+    }
+    .nav-btn-label span::before{
+        bottom: 7px;
+    }
+    .nav-btn-label span::after{
+        top: 7px;
+    }
+    .nav-btn:checked ~ .nav-btn-label span{
+
+        background: none;
+        margin: auto;
+    }
+    .nav-btn:checked ~ .nav-btn-label span::before{
+        transform: translateY(7px) rotate(45deg);
+
+    }
+    .nav-btn:checked ~ .nav-btn-label span::after{
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    nav{
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        left: 0%;
+        background: var(--nav-bg);
+        width: 100%;
+        transform: scale(1,0);
+        transform-origin: top;
+        transition: transform .4s ease-in-out;
+        font-family: 'Ubuntu Mono', monospace, cursive;
+    }
+    nav ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        background-color:Crimson;
+        
+    }
+    nav li{
+        margin-bottom: 1em;
+    }
+    nav a{
+        color: white;
+        line-height: 50px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        opacity: 0;
+        transition: opacity .15s ease-in-out;
+
+    }
+    nav a:hover{
+        text-shadow: black 2px 2px 3px;
+
+    }
+    .nav-btn:checked ~ nav{
+        transform: scale(1,1);
+    }
+    .nav-btn:checked ~ nav a{
+        opacity: 1;
+        transition: opacity .25s ease-in-out .25s;
+    }
+    /* */
+    .puste{
+        display: none;
+    }
+    
+    .muzyka{
+        display: none;
+    }
+    .audio{
+        display: none;
+    }
+    
+    .logolol img{
+        width: 100%;
+        height: auto;
+    }
+    .inf{
+        color: black;
+        background:rgba(255,255,255,.5);
+        width: 100%;
+        position: relative;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%);
+        vertical-align: middle;
+        border-radius: 40px;
+        padding: 10px;
+        z-index: 9;
+        opacity: 0.9;
+    }
+    div p{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        font-family: 'Source Sans Pro', sans-serif;
+        opacity: 1;
+        height: auto;
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px; height: 0; overflow: hidden;
+    }
+
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+    main article{
+        height:  75vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Komputery */
+@media(min-width: 1024px){
+    footer{
+        clear: both;
+        position: relative;
+        bottom: 0;
+        height: 2.5vh;
+    }
+    .jeden{
+        width: 33%;
+        height: 87.5vh;
+        position: relative;
+        transition: 0.5s background; 
+        background-image: url(Obrazy/fortkomp.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        float: left;
+    }
+    .jeden i{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-60%);
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 75px;
+        opacity: 0;
+        }
+    .jeden:hover i{
+        background-repeat: no-repeat;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    .jeden:hover{
+        background-image: url(Obrazy/fortkomp1.jpg);
+        transition: 0.5s all;
+    }
+     .dwa{
+        width: 33.5%;
+        height: 87.5vh;
+        position: relative;
+        transition: 0.5s background; 
+        background-image: url(Obrazy/csgokomp.jpg);
+        background-size: 100% 100%;
+        float: left;
+    }
+    .dwa i{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-60%);
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 75px;
+        opacity: 0;
+        }
+    .dwa:hover i{
+        background-repeat: no-repeat;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    .dwa:hover{
+        background-image: url(Obrazy/csgokomp1.jpg);
+        transition: 0.5s all;
+    }
+     .trzy{
+        width: 33.5%;
+        height: 87.5vh;
+        position: relative;
+        transition: 0.5s background; 
+        background-image: url(Obrazy/lolkomp1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        float: left;
+    }
+    .trzy i{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-60%);
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 75px;
+        opacity: 0;
+        }
+    .trzy:hover i{
+        background-repeat: no-repeat;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    .trzy:hover{
+        background-image: url(Obrazy/lolkomp.jpg);
+        transition: 0.5s all;
+    }  
+    
+    /*Nawigacja*/
+    .nav-btn-label{
+        display: none;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        background-color: crimson;
+        height: 50px;
+        font-weight: bold;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+    }
+
+    .logo{
+        grid-column: 2 / 3;
+        font-size: 30px;
+        top:5px;
+        position: relative;
+    }
+    nav{
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav li{
+        margin-left: 3em;
+        margin-bottom: 0;
+        list-style-type: none;
+    }
+    nav a{
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before{
+        content: "";
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        top: -0.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0,1);
+        transition: transform ease-in-out .25s;
+    }
+    nav a:hover::before{
+        transform: scale(1,1);
+    }
+    input{
+        display: none;
+    }
+    /**/
+    
+    
+    
+    
+    
+    
+    #top{
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        font-size: 50px;
+        color: white;
+        z-index: 999;
+    }
+    #top:hover{
+        transition: 0.1s all;
+        font-size: 55px;
+    }
+    .puste{
+        opacity: 0;
+    }
+        
+    
+    #info, #ciek, #gal, #film{
+        z-index: 2;
+        background-color: black;
+        overflow: hidden;
+    }
+    
+    .inf{
+        color: black;
+        background:rgba(255,255,255,.5);
+        width: 50%;
+        position: relative;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-40%);
+        vertical-align: middle;
+        border-radius: 40px;
+        padding: 10px;
+        z-index: 9;
+        opacity: 0.9;
+    }
+    div p{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 30px;
+        font-family: 'Source Sans Pro', sans-serif;
+        opacity: 1;
+        height: auto;
+    }
+    .logolol img{
+        position: relative;
+        left:50%;
+        top: 40%;
+        transform: translate(-50%,-60%);
+        text-align: center;
+        vertical-align: middle;
+    }
+    .flex img{
+        width: 400px;
+        height: auto;
+        margin: 10px;
+    }
+    .video-container iframe,
+    .video-container object,
+    .video-container embed{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        height: 75vh;
+        border: 0;
+    }
+    .video-container {
+        position: relative;
+        top: 50%;
+    }
+    .muzyka{
+        height: 10vh;
+        clear: both;
+        width: 33%;
+        border: 1px black solid;
+        display: inline-flex;
+        padding: 0;
+        margin: 0;
+    }
+    .audio{
+        width: 75%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
